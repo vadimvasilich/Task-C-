@@ -1,0 +1,5 @@
+/Users/vadim/Desktop/Task С#/Task03/obj/Debug/net6.0/Task03.csproj.AssemblyReference.cache
+/Users/vadim/Desktop/Task С#/Task03/obj/Debug/net6.0/Task03.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vadim/Desktop/Task С#/Task03/obj/Debug/net6.0/Task03.AssemblyInfoInputs.cache
+/Users/vadim/Desktop/Task С#/Task03/obj/Debug/net6.0/Task03.AssemblyInfo.cs
+/Users/vadim/Desktop/Task С#/Task03/obj/Debug/net6.0/Task03.csproj.CoreCompileInputs.cache
