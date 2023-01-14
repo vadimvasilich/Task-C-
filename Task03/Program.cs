@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Введите число: ");
 String day = Console.ReadLine();
 
-if (day == "1");
+if (day == "1") ;
 {
     Console.WriteLine("Понедельник");
 }
@@ -31,5 +31,5 @@ else if (day == "7")
 }
 else
 {
-    Console.WriteLine("Неверный ввод");  
+    Console.WriteLine("Неверный ввод");
 }
