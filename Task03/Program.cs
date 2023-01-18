@@ -5,7 +5,7 @@
 */
 
 Console.Write("Введите число от 1 до 7: ");
-String day = Console.ReadLine();
+string day = Console.ReadLine();
 
 if (day == "1")
 {
