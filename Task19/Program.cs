@@ -13,11 +13,13 @@ bool Palindrom(int num1, int num2, int num3, int num4)
 
 Console.WriteLine("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+
+if (number > 0 && number % 100000 == number)
+{
 int firstDigit = number / 10000;
 int lastDigit = number % 10;
 int secondDigit = number / 1000 % 10;
 int penultDigit = number / 10 % 10;
-
-if (number % 100000 == number)
 Console.Write(Palindrom(firstDigit, lastDigit, secondDigit, penultDigit) ? "Да" : "Нет");
+}
 else Console.WriteLine("Не правильный ввод!!!");
