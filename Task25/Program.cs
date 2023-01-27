@@ -9,8 +9,12 @@ double number = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите степень числа: ");
 int powNumber = Convert.ToInt32(Console.ReadLine());
 double result = 1;
-for (int i = 1; i <= powNumber; i++)
+
+if (powNumber > 0)
 {
-    result = Math.Pow(number, i);
-}
+    for (int i = 1; i <= powNumber; i++)
+    {
+        result = Math.Pow(number, i);
+    }
 Console.WriteLine(result);
+}
