@@ -14,7 +14,7 @@ bool Palindrom(int num1, int num2, int num3, int num4)
 Console.WriteLine("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 0 && number % 100000 == number)
+if (number > 9999 && number % 100000 == number)
 {
 int firstDigit = number / 10000;
 int lastDigit = number % 10;
