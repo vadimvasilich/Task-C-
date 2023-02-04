@@ -53,9 +53,8 @@ void SquareEvenElements(int[,] matrix)
     }
 }
 
-
 int[,] array2D = CreateMatrixRndInt(4, 3, 0, 10);
 PrintMatrix(array2D);
 SquareEvenElements(array2D);
-Console.WriteLine();
+Console.WriteLine("Новый массив:");
 PrintMatrix(array2D);
