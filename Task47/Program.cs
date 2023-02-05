@@ -28,8 +28,8 @@ void PrintMatrix(double[,] matrix)
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 3} | ");
-            else Console.Write($"{matrix[i,j], 3} ");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 5} | ");
+            else Console.Write($"{matrix[i,j], 5} ");
         }
         Console.WriteLine("|");
     }
