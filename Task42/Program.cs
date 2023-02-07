@@ -5,8 +5,7 @@
 2 -> 10
 */
 
-Console.WriteLine("Введите натуральное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+
 
 int BinaryNumber(int num)
 {
@@ -20,5 +19,9 @@ int BinaryNumber(int num)
     }
     return res;
 }
+
+Console.WriteLine("Введите натуральное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
 int resalt = BinaryNumber(number);
-Console.WriteLine(resalt);
+if (number > 0) Console.WriteLine(resalt);
+else Console.WriteLine("Ошибка ввода. Введите натуральное число");
