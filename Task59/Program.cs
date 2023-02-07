@@ -42,7 +42,9 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[] MinIndexElementsMatrix(int[,] matrix)
+// Находим индекс минимального элемента массива
+
+int[] IndexMinElementMatrix(int[,] matrix)
 {
     int min = matrix[0, 0];
     int[] arrayIndexMin = new int[2];
@@ -61,29 +63,32 @@ int[] MinIndexElementsMatrix(int[,] matrix)
 
     return arrayIndexMin;
 }
+// Пропускаем в цикле строку и столбец с индексом минимального по значению эл-та
+// который мы нашли выше.
+
 int[,] MatrixWithoutRowColMinElements(int[,] matrix, int[] minIndex)
 {
-    int[,] matrixWithoutElem = new int[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
+    int[,] matrixWithoutRowColumn = new int[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
     int m = 0,n = 0;
 
-    for (int i = 0; i < matrixWithoutElem.GetLength(0); i++)
+    for (int i = 0; i < matrixWithoutRowColumn.GetLength(0); i++)
     {
         if (m == minIndex[0]) m++ ;
         
-        for (int j = 0; j < matrixWithoutElem.GetLength(1); j++)
+        for (int j = 0; j < matrixWithoutRowColumn.GetLength(1); j++)
         {
             if (n == minIndex[1]) n++ ;
-            matrixWithoutElem[i,j] = matrix[m,n];           
+            matrixWithoutRowColumn[i,j] = matrix[m,n];           
             n ++;
         }
         n = 0;
         m++;
     }
-    return matrixWithoutElem;
+    return matrixWithoutRowColumn;
 }
 int[,] array2D = CreateMatrixRndInt(4, 4, 0, 10);
 PrintMatrix(array2D);
 Console.WriteLine();
-int[] arrayMinIndexElem = MinIndexElementsMatrix(array2D);
-int[,] array2DWithOutElementsMin = MatrixWithoutRowColMinElements(array2D,arrayMinIndexElem);
+int[] arrayIndexMinElement = IndexMinElementMatrix(array2D);
+int[,] array2DWithOutElementsMin = MatrixWithoutRowColMinElements(array2D,arrayIndexMinElement);
 PrintMatrix(array2DWithOutElementsMin);
