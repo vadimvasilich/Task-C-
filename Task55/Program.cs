@@ -56,7 +56,7 @@ bool IsSquareMatrix(int[,] matrix)
     return (matrix.GetLength(0) == matrix.GetLength(1));
 }
 
-int[,] matrix2 = CreateMatrixRndInt(4, 4, 0, 9);
+int[,] matrix2 = CreateMatrixRndInt(4, 3, 0, 9);
 PrintMatrix(matrix2);
 if (IsSquareMatrix(matrix2))
 {
@@ -64,3 +64,4 @@ if (IsSquareMatrix(matrix2))
     int[,] replacingRowsColumns = ReplacingRowsColumns(matrix2);
     PrintMatrix(replacingRowsColumns);
 }
+else Console.WriteLine("Действие невозможно");
