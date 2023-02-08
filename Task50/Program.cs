@@ -37,11 +37,11 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("|");
     }
 }
-
-bool FindElement(int x, int y)
-{
-    return x <= 3 || y <= 4;
-}
+// Ушёл от магических чисел
+// bool FindElement(int x, int y)
+// { 
+//     return x <= 3 || y <= 4;
+// }
 
 int[,] array2D = CreateMatrixRndInt(3, 4, 0, 9);
 PrintMatrix(array2D);
@@ -51,8 +51,8 @@ int row = Convert.ToInt32(Console.ReadLine());
 int column = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 
-bool result = FindElement(row, column);
-Console.WriteLine(result ? array2D[row, column] : "такого элемента в массиве нет");
+// bool result = FindElement(row, column);
+// Console.WriteLine(result ? array2D[row, column] : "такого элемента в массиве нет");
 
-// if (row <= 3 && column <= 4) Console.WriteLine(array2D[row, column]);
-// else Console.WriteLine(" такого элемента в массиве нет");
+if (row <= array2D.GetLength(0) && column <= array2D.GetLength(1)) Console.WriteLine(array2D[row, column]);
+else Console.WriteLine(" такого элемента в массиве нет");
