@@ -34,5 +34,5 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] array2D = GenerateMatrix(4, 3);
+int[,] array2D = GenerateMatrix(3, 4);
 PrintMatrix(array2D);
