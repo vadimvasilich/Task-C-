@@ -20,7 +20,7 @@ Console.WriteLine(Factorial(3)); // 1 * 2 * 3 = 6
 int SumDigits(int num)
 {
     if (num == 0) return 0;
-    else return num % 10 + SumDigits(num / 10);
+    return num % 10 + SumDigits(num / 10);
 }
 
 Console.WriteLine("Введите число :");
