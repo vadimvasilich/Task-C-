@@ -3,7 +3,7 @@
 N = 5 -> "1, 2, 3, 4, 5"
 N = 6 -> "1, 2, 3, 4, 5, 6"
 */
-
+ 
 void NaturalNumbers(int num)
 {
     if (num == 0) return;
@@ -13,4 +13,6 @@ void NaturalNumbers(int num)
 
 Console.WriteLine("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-NaturalNumbers(number);
+
+if (number > 0) NaturalNumbers(number);
+else Console.WriteLine("Ошибка!!! Число не натуральное: ");
