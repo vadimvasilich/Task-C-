@@ -37,15 +37,12 @@ void PrintMatrix(int[,] matrix)
 int[,] ReplacingRowsColumns(int[,] matrix)
 {
     int[,] mtx = new int[matrix.GetLength(0), matrix.GetLength(0)];
-    if (matrix.GetLength(0) != matrix.GetLength(1)) Console.WriteLine("Действие невозмжно");
-    else
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int i = 0; i < matrix.GetLength(0); i++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                mtx[j, i] = matrix[i, j];
-            }
+            mtx[j, i] = matrix[i, j];
         }
     }
     return mtx;
@@ -56,8 +53,9 @@ bool IsSquareMatrix(int[,] matrix)
     return (matrix.GetLength(0) == matrix.GetLength(1));
 }
 
-int[,] matrix2 = CreateMatrixRndInt(4, 3, 0, 9);
+int[,] matrix2 = CreateMatrixRndInt(4, 4, 0, 9);
 PrintMatrix(matrix2);
+
 if (IsSquareMatrix(matrix2))
 {
     Console.WriteLine();
@@ -65,3 +63,17 @@ if (IsSquareMatrix(matrix2))
     PrintMatrix(replacingRowsColumns);
 }
 else Console.WriteLine("Действие невозможно");
+
+
+// void ChangeRowsOnColumns(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0) - 1; i++)
+//     {
+//         for (int j = i + 1; j < matrix.GetLength(1); j++)
+//         {
+//             int temporary = matrix[i, j];
+//             matrix[i, j] = matrix[j, i];
+//             matrix[j, i] = temporary;
+//         }
+//     }
+// }
