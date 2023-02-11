@@ -65,7 +65,7 @@ void FrequencyDictionary(int[] arr)
             count = 1;
         }
     }
-    Console.WriteLine($"{tmp} - {count}");
+    Console.WriteLine($"{temp} - {count}");
 }
 
 int[,] createMatrix = CreateMatrixRndInt(3, 4, 0, 10);
