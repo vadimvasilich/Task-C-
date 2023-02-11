@@ -32,6 +32,17 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+/* void ReplaceRows (int[,] matrix)
+{    
+    for (int i = 0; i < matrix.GetLength(1); i++)
+    {
+        int tmp = matrix[0, i];
+        matrix[0, i] = matrix[matrix.GetLength(0) - 1, i];
+        matrix[matrix.GetLength(0) - 1, i] = tmp;
+    }
+}
+*/
+
 void StringReplacement(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(1); i++)
