@@ -15,6 +15,13 @@ int SumNaturalNumbers(int numberM, int numberN)
     return numberM += SumNaturalNumbers(numberM + 1, numberN);
 }
 
+// int SumNaturalNumbers(int numberM, int numberN)
+// {
+//     if (numberM == numberN) return numberM;
+//     else if (numberM > numberN) return numberM + SumNaturalNumbers(numberM - 1, numberN);
+//     else return numberN + SumNaturalNumbers(numberM, numberN -1);
+// }
+
 Console.WriteLine("Введите два числа:");
 int numberM = Convert.ToInt32(Console.ReadLine());
 int numberN = Convert.ToInt32(Console.ReadLine());
